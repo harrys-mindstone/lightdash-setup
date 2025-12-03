@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: example
+    columns:
+      - name: id
+        description: "Primary key"
+      - name: name
+        description: "Item name"
+      - name: amount
+        description: "Amount value"

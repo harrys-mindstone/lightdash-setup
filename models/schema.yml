@@ -2,10 +2,27 @@ version: 2
 
 models:
   - name: example
+    description: "Sales transactions"
     columns:
       - name: id
         description: "Primary key"
-      - name: name
-        description: "Item name"
+      - name: date
+        description: "Sale date"
+      - name: product
+        description: "Product name"
+      - name: region
+        description: "Sales region"
       - name: amount
-        description: "Amount value"
+        description: "Sale amount in dollars"
+        meta:
+          metrics:
+            total_revenue:
+              type: sum
+            average_sale:
+              type: average
+      - name: quantity
+        description: "Units sold"
+        meta:
+          metrics:
+            total_units:
+              type: sum
